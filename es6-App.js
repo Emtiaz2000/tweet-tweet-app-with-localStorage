@@ -34,7 +34,7 @@ class UI {
         inputTxt.value = '';
         
     };
-
+//alarting with bootstrap 
     alarting(massage,value){
         const alart = document.querySelector('#alart')
         const h4= document.querySelector('#title')
@@ -84,6 +84,8 @@ class Store{
             ui.creatLi(element)
         });
     }
+    
+    //delete from localStorage
     static delete(id){
         let tweet = Store.getTweet();
         tweet.forEach((ele,index)=>{
@@ -97,7 +99,7 @@ class Store{
 }
 window.addEventListener('DOMContentLoaded',Store.displyingUi)
 
-
+//submit button work
 submitBtn.addEventListener('click', function () {
 const ui =new UI()
     if (inputName.value === '' || inputTxt.value === '') {
@@ -118,7 +120,7 @@ const ui =new UI()
 })
 
 
-//deleting data
+//deleting data from user interface
 tweetCommentsOl.addEventListener('click',function deleting(e){
  if(e.target.id==='delete'){
        e.target.parentElement.parentElement.remove()
