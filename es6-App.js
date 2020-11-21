@@ -20,7 +20,6 @@ class UI {
     creatLi({id,name,text}) {
         const li = document.createElement('li');
         li.className = 'card my-3';
-        li.id = `tweet-1`
         li.innerHTML = `
               <div class="card-body">
               <h5 class="card-title heading-title"><span></span> ${name}</h5>
